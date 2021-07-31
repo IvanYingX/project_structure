@@ -162,7 +162,7 @@ class Date:
 
 class Scraper:
     '''
-    ### Extract the celebrities that were born in a certain date
+    Extract the celebrities that were born in a certain date
 
     Attributes:
         ROOT (str): The wikipedia URL to which we are going to add
@@ -209,7 +209,13 @@ class Scraper:
 
     def get_celebrities(self, date: str = None) -> list:
         '''
-        Add a proper docstring
+        Returns the list of celebrities that were born in the 
+        given date. If date is not given return the list of
+        celebrities that were born on the 1st January
+
+        Returns:
+            celebrities (list): List containing the names of
+                                the celebrities
         '''
         if date is None:
             date = 'January_1'
@@ -224,4 +230,3 @@ if __name__ == '__main__':
     date_object = Date(27, 3, 1991)
     scraper = Scraper()
     celebrities = scraper.get_celebrities('February_30')
-    print(celebrities)
